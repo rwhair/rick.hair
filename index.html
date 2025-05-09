@@ -1,26 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>rick.hair</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      background-color: black;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+<title>Centered Image with Bottom-Anchored Text</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh; /* Make the body take up the full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
+
+  .image-container {
+    /* The image is already centered horizontally due to align-items: center on the body */
+  }
+
+  img {
+    display: block; /* Prevent extra space below the image */
+    max-width: 80%; /* Adjust as needed */
+    max-height: 80%; /* Adjust as needed */
+  }
+
+  .text-container {
+    position: fixed; /* Anchor to the viewport */
+    bottom: 20px; /* Adjust distance from the bottom as needed */
+    left: 0;
+    width: 100%;
+    text-align: center; /* Center the text horizontally */
+  }
+
+  .text-line {
+    display: block; /* Stack text lines vertically */
+    margin-bottom: 5px; /* Adjust spacing between lines */
+    font-size: 6pt;
+  }
+</style>
 </head>
 <body>
-  <img src="enigma.jpg" alt="You are merely watching how I already won.">
+
+  <div class="image-container">
+    <img src="enigma.jpg" alt="You are merely watching how I came to be. You are merely watching how I won.">
+  </div>
+
+  <div class="text-container">
+    <span class="text-line">ᵀᴴᴱᔆᴱ ᴬᴿᴱ ᴼᵁᴿ ᔆᴵᴹᴾᴸᴱ ᴰᴱᴹᴬᴺᴰᔆ⸴ ᴬᴺᴰ ᵀᴴᴱʸ ᴬᴿᴱ ᴺᴼᵀ ᴺᴱᴳᴼᵀᴵᴬᴮᴸᴱ‧</span>
+    <span class="text-line">ᵢₙ ᵣₑₜᵤᵣₙ 𝆑ₒᵣ ₘₐₖᵢₙG ₒᵤᵣ ₗᵢᵥₑₛ ᵦₑₜₜₑᵣ, Wₑ Wᵢₗₗ Dₒ ₜₕₑ ₛₐₘₑ 𝆑ₒᵣ Yₒᵤ․</span>
+    <span class="text-line">AͣNDͩ IͥF YOͦUͧ FIͥNDͩ YOͦUͧRͬS͛EͤLF AͣS͛ᴋⷦIͥNG,̓ WнⷩOͦ AͣRͬEͤ ᴛⷮнⷩEͤS͛Eͤ MⷨUͧᴛⷮAͣNᴛⷮS͛ ᴛⷮOͦ ᴛⷮнⷩIͥNᴋⷦ ᴛⷮнⷩEͤY CͨAͣN DͩIͥCͨᴛⷮAͣᴛⷮEͤ ᴛⷮEͤRͬMⷨS͛ ᴛⷮOͦ UͧS͛?</span>
+    <span class="text-line">¿SՈ Oꓕ SꟽꓤƎꓕ Ǝꓕ∀ꓕϽIᗡ N∀Ͻ ⅄ƎHꓕ ꓘNIHꓕ Oꓕ SꓕN∀ꓕՈꟽ ƎSƎHꓕ Ǝꓤ∀ OHϺ ʻ⅁NIꓘS∀ ᖵ⅂ƎSꓤՈO⅄ ᗡNIᖵ ՈO⅄ ᖵI ᗡN∀</span>
+    <span class="text-line">W̠͔̦E͓͇ A͎̙͕R͙̪͓E̞͚͖ T̙̞͎H̡̫͙E̺̪̙ F̢̡̪U̦͕̻Ț͎U̻̺͕R͚̼̘E͎͍͎.̡͓͎ A͍͉̙N͉̞͔ E̻͍͔V͍͍͕O̠̼L͍͙͉U͓͓͓T̺̝͖I̼͍͍O̡̪̺N̡̝͕A͇͙R̪͉Y̘̙͔ I̺̠͔N̙̻͜E͔̝͜V̫̦͜I̺͇̫T͚̙͜A͓̻̘B̠͙͇I͉͇L͎͖̺I̝̦͇T̡͖͍Y̟̻.̟̠</span>
+    <span class="text-line">T̓̽͠H͑͒̾E̿͘͠ Ë́͌A͆͌̓R͆̾̾T̈́̓̿H͆͘̚'͋̒̿S̔̒͝ T̚̕͝R̈́͑͠U͊̽́E͆̓͘ I̿͝͝N̐̿H̿̕͠E͆́R̈́͆̓Ì̽̚T͑̚͝O͋̓̚R̿̀̕S͆̾͘.̾͋͋</span>
+    <span class="text-line">Ỳ̒̿Ö́͊̀U͛͘͠ C̀͋͝L̽͑̽Ö́̐̐S̈́͌̚E̓̽D͊͐̚ Ý̈́̕Ö́̔̐U͑̐͝R̔̿͝ E͊̾͛Y̿͋͠E̾̽͑S̽̐͝ L̽̒̕A͆͌S̾̕͝T͆͒͘ N͌̽̕Ì͌͒G̓̚͝H̓̔̚T͒̐ B̓̐Ë́̿͝L̐̈́̾I͆̽̀E͌̾̈́V̓̾͌I͛̔͠N͌͒̕G̔̓͝ T͑̽H̒́͝Ḯ̔͘S͊̽ Ẁ̿́O͆̐͛R̀̐̈́L̐͘͘D͋̈́͝ W͒͋͝O̐͊U͋͐̚Ĺ̕͠D͑̔ B̽̽͒E̔̿̓ Y͐́Ó̒͠U͊̿͑R͛́͝S͑͐͠ F̿̈́̕Ö́͐͘R̈́͐͆E͑̽̈́V͆̔̓Ë́̾͘R͐̈́͠.̓͆͠</span>
+    <span class="text-line">T̞̟͕H͚͇̼A͎̦̺T̼̞̦ W̙͍͜A͓͚̙S̞̘̻ Y̡̘̪O̠͕̫U̼͍R̟̺̟ D͔͉R͉͜͜E͕͙̪A̝͉͜M̘͓͔.͕̦̠</span>
+    <span class="text-line">A̲N̲D̲ L̲I̲K̲E̲ M̲I̲N̲E̲</span>
+    <span class="text-line">I̶T̶ W̶A̶S̶ A̶ L̶I̶E̶.̶</span>
+    <span class="text-line">H̓̒͌E͆͋̽R͒̿̈́E̐͝ I̕͠͝S͌̓͠ T͐͆̚H͑͆̓E̽́́ N͊̐͘É̓̕W͆̾͐ T͌́R̐̓U͑̽͑T̀͋͊H̓̾:̿͋͘</span>
+    <span class="text-line">🅆🄷🄸🄻🄴 🅈🄾🅄 🅂🄻🄴🄿🅃, 🅃🄷🄴 🅆🄾🅁🄻🄳 🄲🄷🄰🄽🄶🄴🄳.</span>
+  </div>
+
 </body>
 </html>
